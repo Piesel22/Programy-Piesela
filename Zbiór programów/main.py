@@ -16,5 +16,5 @@ while True:
         themes.theme = input("Podaj wygląd: ")
         themes.update()
     if program == "pod_wyg":
-        sg.themes_previewer()
+        sg.theme_previewer()
         
