@@ -1,11 +1,16 @@
 
 import PySimpleGUI as sg
-from datetime import datetime
+import datetime
+
+def getTime():
+    return datetime.datetime.now()
 
 def run():
+    layout = [[sg.Text('', key='_time_')]]
+    window = sg.Window('Zegar', layout)
     while True:
-        window = sg.Window("Zegar", [[sg.Text(datetime.now())]])
-        event, values = window.read()
+        event, values = window.Read(timeout=10)
         if event == sg.WIN_CLOSED:
             break
+        window.find_element('_time_').Update(getTime())
     window.close()
