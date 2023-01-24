@@ -1,3 +1,5 @@
+# Programy Pieseła
+Dziękuję za używanie tych programów! Tutaj są różne komendy i jak ich używać.
 # Polecenia
 calc, zegar, wygląd, pod_wyg
 # Użycie
