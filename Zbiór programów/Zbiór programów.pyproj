@@ -23,6 +23,9 @@
   <ItemGroup>
     <Compile Include="calc.py" />
     <Compile Include="main.py" />
+    <Compile Include="notatnik.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="themes.py" />
     <Compile Include="zegar.py" />
   </ItemGroup>

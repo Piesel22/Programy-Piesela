@@ -3,6 +3,7 @@
 import calc
 import zegar
 import themes
+import notatnik
 
 themes.update()
 
@@ -17,4 +18,6 @@ while True:
         themes.update()
     if program == "pod_wyg":
         sg.theme_previewer()
+    if program == "notatnik":
+        notatnik.run()
         
