@@ -12,4 +12,5 @@ Musisz najpierw wprowadzić tą komendę, a później podać wygląd.
 4. Podgląd Wyglądów okna (pod_wyg):
 Wprowadzasz komendę, a przykłady okien ci się pokazują.
 5. Notatnik:
-W polu edytowania wpisujesz tekst, kod czy cokolwiek innego, wpisujesz nazwę pliku w polu poniżej i klikasz zapisz.
+a) W polu edytowania wpisujesz tekst, kod czy cokolwiek innego, wpisujesz nazwę pliku w polu poniżej i klikasz zapisz.
+b) Żeby otworzyć plik, musisz wpisać w polu pod polem edytowania jego nazwę (Plik musi być w C:\ProgPies Dokumenty!) i kliknąć otwórz.
