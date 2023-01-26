@@ -13,6 +13,8 @@ while True:
         calc.run()
     if program == "zegar":
         zegar.run()
+    if program == "stoper":
+        zegar.run2()
     if program == "wygląd":
         themes.theme = input("Podaj wygląd: ")
         themes.update()
