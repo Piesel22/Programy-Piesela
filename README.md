@@ -1,5 +1,6 @@
 # Programy Pieseła
-Dziękuję za używanie tych programów! Tutaj są różne komendy i jak ich używać.
+Dziękuję za używanie tych programów!
+Tutaj są różne komendy i jak ich używać. (Uwaga! Jak wejdziesz w program to wyskoczy powiadomienie "System windows ochronił ten komputer.", dlatego że nie ustawiłem wydawcy oprogramowania.)
 # Polecenia
 calc, zegar, wygląd, pod_wyg, notatnik, stoper
 # Użycie
