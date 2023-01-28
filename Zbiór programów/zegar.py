@@ -44,6 +44,6 @@ def run2():
             stoperW = False
         if stoperW == True:
             stoper('upd')
+            time.sleep(1)
         window.find_element('_stoper_').Update(f"{stoper('ret1')}:{stoper('ret2')}:{stoper('ret3')}")
-        time.sleep(1)
     window.close()
