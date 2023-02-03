@@ -1,6 +1,10 @@
 import PySimpleGUI as sg
 import math
+import PySimpleGUI as sg
+import math
 from decimal import Decimal
+
+maxdec = Decimal(99999999999999999999999999999)
 
 def run():
     layout = [[sg.Text("Podaj pierwszą liczbę"), sg.InputText()],[sg.Text("Podaj drugą liczbę"), sg.InputText()], [sg.Button("+"), sg.Button("-"), sg.Button("*"), sg.Button("/"), sg.Button("^")], [sg.Button("Zaokrąglenie"), sg.Button("sin"), sg.Button("cos"), sg.Button("Exp")]]
@@ -11,7 +15,10 @@ def run():
       if event == sg.WIN_CLOSED:
         break
       if event == "+":
-        layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0]) + Decimal(values[1]))]]
+        if Decimal(values[0]) + Decimal(values[1]) < maxdec:
+            layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0]) + Decimal(values[1]))]]
+        else:
+            layout2 = [[sg.Text("Jedna z podanych liczb jest za duża.")]]
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "-":
@@ -19,7 +26,10 @@ def run():
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "*":
-        layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0]) * Decimal(values[1]))]]
+        if Decimal(values[0]) * Decimal(values[1]) < maxdec:
+            layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0]) * Decimal(values[1]))]]
+        else:
+            layout2 = [[sg.Text("Jedna z podanych liczb jest za duża.")]]
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "/":
@@ -27,7 +37,10 @@ def run():
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "^":
-        layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0])**Decimal(values[1]))]]
+        if Decimal(values[0])**Decimal(values[1]) < maxdec:
+            layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0])**Decimal(values[1]))]]
+        else:
+            layout2 = [[sg.Text("Jedna z podanych liczb jest za duża.")]]
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "Zaokrąglenie":
