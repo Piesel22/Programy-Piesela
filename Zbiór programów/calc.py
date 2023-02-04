@@ -1,7 +1,5 @@
 import PySimpleGUI as sg
 import math
-import PySimpleGUI as sg
-import math
 from decimal import Decimal
 
 maxdec = Decimal(99999999999999999999999999999)
@@ -55,8 +53,11 @@ def run():
         layout2 = [[sg.Text("Wynik działania:")], [sg.Text(math.cos(Decimal(values[0])))]]
         window2 = sg.Window("Wynik", layout2)
         window2.read()
-      if event == "Exp":
-        layout2 = [[sg.Text("Wynik działania:")], [sg.Text((math.exp(Decimal(values[0]))))]]
-        window2 = sg.Window("Wynik", layout2)
-        window2.read()
+      #if event == "Exp":
+      #  if Decimal(values[0]maxdec:
+      #      layout2 = [[sg.Text("Wynik działania:")], [sg.Text((math.exp(Decimal(values[0]))))]]
+      #  else:
+      #      layout2 = [[sg.Text("Podana liczba jest za duża.")]]
+      #  window2 = sg.Window("Wynik", layout2)
+      #  window2.read()
     window.close()
