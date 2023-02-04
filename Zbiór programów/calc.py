@@ -35,7 +35,7 @@ def run():
         window2 = sg.Window("Wynik", layout2)
         window2.read()
       if event == "^":
-        if Decimal(values[0])**Decimal(values[1]) < maxdec:
+        if Decimal(values[0]) ** Decimal(values[1]) < maxdec:
             layout2 = [[sg.Text("Wynik działania:")], [sg.Text(Decimal(values[0])**Decimal(values[1]))]]
         else:
             layout2 = [[sg.Text("Jedna z podanych liczb jest za duża.")]]
@@ -53,11 +53,11 @@ def run():
         layout2 = [[sg.Text("Wynik działania:")], [sg.Text(math.cos(Decimal(values[0])))]]
         window2 = sg.Window("Wynik", layout2)
         window2.read()
-      #if event == "Exp":
-      #  if Decimal(values[0]maxdec:
-      #      layout2 = [[sg.Text("Wynik działania:")], [sg.Text((math.exp(Decimal(values[0]))))]]
-      #  else:
-      #      layout2 = [[sg.Text("Podana liczba jest za duża.")]]
-      #  window2 = sg.Window("Wynik", layout2)
-      #  window2.read()
+      if event == "Exp":
+        try:
+            layout2 = [[sg.Text("Wynik działania:")], [sg.Text(math.exp(Decimal(values[0])))]]
+        except OverflowError:
+            layout2 = [[sg.Text("Podana liczba jest za duża.")]]
+        window2 = sg.Window("Wynik", layout2)
+        window2.read()
     window.close()
