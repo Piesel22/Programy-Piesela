@@ -1,11 +1,14 @@
-import time
 import PySimpleGUI as sg
-import datetime
+from requests import get
 
 stoperVar = [0, 0, 0]
 
-def getTime():
-    return datetime.datetime.now()
+def getTime(area):
+    
+    url = f'http://worldtimeapi.org/api/timezone/{area}'
+    resp = get(url)
+    data = resp.json()
+    return data["datetime"]
 def stoper(funkcja):
     if funkcja == 'ret1':
         return stoperVar[0]
@@ -22,13 +25,18 @@ def stoper(funkcja):
             stoperVar[1] == 0
             stoperVar[0] == stoperVar[0] + 1
 def run():
-    layout = [[sg.Text('', key='_time_')]]
+    zegarRej = False
+    layout = [[sg.Text('', key='_time_')],[sg.Text("Podaj kontynent i miasto (rozdziel /, pisz po angielsku)")], [sg.InputText(key="inpt")], [sg.Button("Start")]]
     window = sg.Window('Zegar', layout)
     while True:
         event, values = window.read(timeout=10)
         if event == sg.WIN_CLOSED:
             break
-        window.find_element('_time_').Update(getTime())
+        if event == "Start":
+            zegarRej = True
+        if zegarRej == True:
+            if not values["inpt"] == "":
+                window.find_element('_time_').Update(getTime(values["inpt"]))
     window.close()
 def run2():
     stoperW = False

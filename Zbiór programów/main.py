@@ -7,6 +7,7 @@ import notatnik
 
 themes.update()
 
+
 while True:
     program = input("Podaj polecenie: ")
     if program == "calc":
