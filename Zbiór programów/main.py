@@ -4,6 +4,8 @@ import calc
 import zegar
 import themes
 import notatnik
+import sudoku
+import mieszacz
 
 themes.update()
 
@@ -23,4 +25,8 @@ while True:
         sg.theme_previewer()
     if program == "notatnik":
         notatnik.run()
+    if program == "sudoku":
+        sudoku.run()
+    if program == "mieszacz":
+        mieszacz.run()
         
